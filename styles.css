@@ -1,0 +1,73 @@
+    *{
+        box-sizing: border-box;
+        
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        /* cursor: none; */
+    }
+    html{
+        width: 100%;
+    }
+    #heading,#foot{
+        margin-top: 4%;
+        text-align: center;
+        font-size: 40px;
+    }
+    #container{
+        border: 5px solid white;
+        border-top: 20px solid white;
+        border-bottom: 20px solid white;
+        border-right:outset;
+        width: 600px;
+        height: 500px;
+        margin: auto;
+        margin-top: 50px;
+        position: relative;
+        
+       
+    }
+    #playarea{
+        cursor: none;
+    }
+    #pad1,#pad2{
+        width: 10px;
+        height:70px;
+        background-color: aqua;
+        position: absolute;
+        /* display: inline-block; */
+        
+    }
+    #line{
+        
+        height: 450px;
+        width: 1px;
+        position: absolute;
+        left: 280px;
+        border: 25px dashed;
+        border-left: 0;
+        opacity: 75%;
+
+
+    }
+    #pad2{
+        left: 550px;
+        top:190px;
+    
+    }
+    #pad1{
+        left: 25px;
+        top:190px;
+    }
+    #ball{
+        border-radius: 100px;
+        width: 20px;
+        background-color: bisque;
+        position: absolute;
+        left: 250px;
+        top:210px;
+
+    }
