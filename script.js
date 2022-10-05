@@ -1,11 +1,13 @@
-let posY=250,paddir=0,prevpos=0,ballxdir=+1,ballydir=+1,ballxpos=100,ballypos=180,score=0,speed=9;
+let posY=250,paddir=0,prevpos=0,ballxdir=+1,ballydir=+1,ballxpos=100,ballypos=180,score=0,speed=12 ;
 let tem,run=1,pause=0;
 
-startgame();
+
 function startgame(){
   tem = setInterval(game,15);
 }
 // var k = 0;
+startgame();
+
 function game(){
    
     // console.log(k);
@@ -58,7 +60,7 @@ function gameover(){
     run=0;
     const retry = document.getElementById("retry");
     retry.style.display = "block";
-    document.getElementById("foot").innerHTML="Retry :- spacebar";
+    document.getElementById("foot").innerHTML="Retry :- SPACEBAR";
     document.getElementById("playarea").style.cursor = "pointer" ;
     retry.addEventListener("click",function(){
         location.reload();
@@ -79,13 +81,7 @@ function getCursorPosition(event) {
     paddir=+1;
     
  }
- function askspeed(){
-  speed = prompt("Please Enter speed (5-10)",5);
-  if(speed<=10 && speed>=5)
-  {}
-  else
-  {speed=5;}
- }
+ 
  function pauser(input){
  
   if(input===' '&&run==1){
