@@ -1,6 +1,9 @@
 let posY=250,paddir=0,prevpos=0,ballxdir=+1,ballydir=+1,ballxpos=100,ballypos=180,score=0,speed=12 ;
 let tem,run=1,pause=0;
-
+let ballhit1,ballhit2,gameded;
+ballhit1 = new Audio ("sounds/snd4.mp3");
+ballhit2 = new Audio ("sounds/snd5.mp3");
+gameded = new Audio ("sounds/snd6.mp3")
 
 function startgame(){
   tem = setInterval(game,15);
@@ -30,6 +33,7 @@ function game(){
     if((ballxpos>=528 && ballypos<(posY-100) && ballypos>(posY-220)))
     {
       score++;
+      ballhit1.play();
       if(paddir==1)
       {ballydir=1;}
       else
@@ -40,6 +44,7 @@ function game(){
     if (ballxpos<=35 && ballypos<(-posY+660)&& ballypos>(-posY+550))
     {
       score++;
+      ballhit2.play();
       if(paddir==1)
       {ballydir=-1;}
       else
@@ -50,6 +55,7 @@ function game(){
     if(ballxpos>550 || ballxpos<10)
     {
         gameover();
+        gameded.play();
         
     }
   document.getElementById("ball").style.left= ballxpos + "px";

@@ -27,6 +27,7 @@
         margin: auto;
         margin-top: 50px;
         position: relative;
+        background-color:midnightblue;
         
        
     }
@@ -37,7 +38,7 @@
     #pad1,#pad2{
         width: 10px;
         height:70px;
-        background-color: red;
+        background-color:red;
         position: absolute;
         /* display: inline-block; */
         
@@ -51,6 +52,7 @@
         border: 25px dashed;
         border-left: 0;
         opacity: 75%;
+        color:aliceblue;
 
 
     }
