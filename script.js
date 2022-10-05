@@ -1,10 +1,12 @@
-let posY=250,paddir=0,prevpos=0,ballxdir=+1,ballydir=+1,ballxpos=100,ballypos=180,score=0,speed=12 ;
+let posY=250,paddir=0,prevpos=0,ballxdir=+1,ballydir=+1,ballxpos=100,ballypos=180,score=0,speed=10 ;
 let tem,run=1,pause=0;
-let ballhit1,ballhit2,gameded;
+let speen,ballhit1,ballhit2,gameded;
 ballhit1 = new Audio ("sounds/snd4.mp3");
 ballhit2 = new Audio ("sounds/snd5.mp3");
 gameded = new Audio ("sounds/snd6.mp3")
-
+function speedchange(){
+speed =parseInt(document.getElementById("sped").value, 10) ;
+}
 function startgame(){
   tem = setInterval(game,15);
 }
@@ -17,7 +19,7 @@ function game(){
     // console.log(k);
     // k++;
   document.getElementById("pad2").style.top= posY-190 + "px";
-  document.getElementById("heading").innerHTML=score;
+  document.getElementById("heading").innerHTML="SCORE:-" + score;
  
   document.getElementById("pad1").style.top= -posY+580 + "px";
   if(ballxdir==+1)
@@ -96,10 +98,13 @@ function getCursorPosition(event) {
           clearInterval(tem);
           pause=1;
           pausebtn.style.display = "block";
+          document.getElementById("playarea").style.cursor = "pointer" ;
+          
       }
       else{
           pause=0;
           pausebtn.style.display = "none";
+          document.getElementById("playarea").style.cursor = "none" ;
           startgame();
       }
   }

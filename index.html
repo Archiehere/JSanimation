@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PONG</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body >
  <div id="playarea"  onmousemove="getCursorPosition(event)" >
     <div id="heading"  >PONG</div>
+    <form id="spedbox" >
+    SPEED:-<input type="text" id="sped" value="10" onchange="speedchange()">
+</form>
     <div id="container" >
         <div id="pad1"></div>
         
