@@ -6,7 +6,8 @@ function startgame(){
   tem = setInterval(game,15);
 }
 // var k = 0;
-startgame();
+pauser(" ");
+// startgame();
 
 function game(){
    
