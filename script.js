@@ -23,21 +23,21 @@ function game(){
     if((ballxpos==528 && ballypos<(posY-100) && ballypos>(posY-220)))
     {
       score++;
-      // if(paddir==1)
-      // {ballxdir=1;}
-      // else
-      // {ballxdir=-1;}
+      if(paddir==1)
+      {ballydir=1;}
+      else
+      {ballydir=-1;}
       ballxdir*=-1;
     }
     
     if (ballxpos==35 && ballypos<(-posY+660)&& ballypos>(-posY+550))
     {
       score++;
-      // if(paddir==1)
-      // {ballxdir=1;}
-      // else
-      // {ballxdir=-1;}
-       ballxdir*=-1;
+      if(paddir==1)
+      {ballydir=-1;}
+      else
+      {ballydir=1;}
+      ballxdir*=-1;
     }
      
     if(ballxpos>570 || ballxpos<2)
