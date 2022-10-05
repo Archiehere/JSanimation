@@ -32,11 +32,12 @@
     }
     #playarea{
         cursor: none;
+        
     }
     #pad1,#pad2{
         width: 10px;
         height:70px;
-        background-color: aqua;
+        background-color: red;
         position: absolute;
         /* display: inline-block; */
         
@@ -71,3 +72,20 @@
         top:210px;
 
     }
+    #pausebtn,#retry{
+        display: none;
+        z-index: 2;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 162px;
+        left: 240px;
+    }
+    #pausebtn{
+        background-image: url("images/pause.png");
+    }
+    #retry{
+        cursor: pointer;
+        background-image: url("images/retry.png");
+    }
+    
