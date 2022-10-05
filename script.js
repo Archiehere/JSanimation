@@ -71,6 +71,8 @@ function gameover(){
     retry.style.display = "block";
     document.getElementById("foot").innerHTML="Retry :- SPACEBAR";
     document.getElementById("playarea").style.cursor = "pointer" ;
+    document.getElementById("spedbox").style.visibility= "hidden" ;
+
     retry.addEventListener("click",function(){
         location.reload();
     });
